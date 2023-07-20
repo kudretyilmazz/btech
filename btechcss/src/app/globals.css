@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+	scroll-behavior: smooth !important;
+}
+
+.hero {
+	position: relative;
+}
+
+section,
+header,
+footer {
+	max-width: 1440px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.hero > .triangle {
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	z-index: -20;
+	background-color: #fef3c7;
+	-webkit-clip-path: polygon(100% 13%, 1% 100%, 100% 100%);
+	clip-path: polygon(100% 13%, 1% 100%, 100% 100%);
+}
+
+.best-post-card-shadow {
+	box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.07);
+	box-shadow: 0px 25px 50px -12px rgba(255, 255, 255, 0.25);
+}
+
+.whyjoinus-shadow {
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.07), 0px 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.slider-item-shadow {
+	box-shadow: 0px 0px 6px 0px #00000012;
+	box-shadow: 0px 10px 15px -3px #0000001a;
+}
+
+.slider-bg::after {
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.collection-bottom-bg {
+	background-image: url("../assets/images/collection-bottom-bg.svg");
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+
+.collection-selected {
+	box-shadow: 0px 0px 4px 0px #00000012;
+	box-shadow: 0px 4px 6px -1px #0000001a;
+}
+
+.hide-scrollbars {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
+
+.hide-scrollbars::-webkit-scrollbar {
+	display: none;
+}
+
+@media only screen and (max-width: 767px) {
+	body {
+		background-color: #fff;
+	}
+
+	.hero > .triangle {
+		-webkit-clip-path: polygon(100% 13%, -90% 100%, 100% 100%);
+		clip-path: polygon(100% 13%, -195% 100%, 100% 100%);
+		height: 80%;
+	}
+}
